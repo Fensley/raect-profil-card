@@ -1,3 +1,6 @@
+import data from "./data"
+console.log(data)
+
 export default function App() {
   return (
     <div className="card">
@@ -10,22 +13,23 @@ export default function App() {
         <SkillList />
       </div>
     </div>
-  );
-}
+  ); 
+} 
 function SkillList() {
   return (
-    <div className="skill">
-      <List name="Html" />
-      <List name="css" />
-      <List name="javascript" />
-      <List name="React" />
+    <div className="skill-list">
+      <Skill skill="React" emoji="💪" color="blue" />
+      <Skill skill="HTML+CSS" emoji="💪" color="orange" />
+      <Skill skill="JavaScript" emoji="💪" color="yellow" />
+      <Skill skill="Svelte" emoji="👶" color="orangered" />
     </div>
   );
 }
-function List(props) {
+function Skill(props) {
   return (
-    <div className="skill-list">
-      <h5>{props.name}</h5>
+    <div className="skill" style={{ backgroundColor: props.color }}>
+      <span>{props.skill}</span>
+      <span>{props.emoji}</span>
     </div>
   );
 }
