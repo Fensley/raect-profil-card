@@ -1,5 +1,5 @@
-import data from "./data"
-console.log(data)
+import {data,emo} from "./data"
+console.log(emo)
 
 export default function App() {
   return (
@@ -18,14 +18,20 @@ export default function App() {
 function SkillList() {
   return (
     <div className="skill-list">
-      <Skill skill="React" emoji="💪" color="blue" />
-      <Skill skill="HTML+CSS" emoji="💪" color="orange" />
-      <Skill skill="JavaScript" emoji="💪" color="yellow" />
-      <Skill skill="Svelte" emoji="👶" color="orangered" />
+
+       {data.map((dt)=>(
+        
+      <Skill skill={dt.skill} emoji={dt.level} color={dt.color} key={dt.skill} />
+
+    ))}
+   
     </div>
-  );
+  )
+  
 }
+
 function Skill(props) {
+
   return (
     <div className="skill" style={{ backgroundColor: props.color }}>
       <span>{props.skill}</span>

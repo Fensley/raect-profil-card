@@ -1,7 +1,7 @@
 const data = [
     {
         skill: "HTML+CSS",
-        level: "advanced",
+        level: "💪",
         color: "#2662EA"
     },
     {
@@ -11,7 +11,7 @@ const data = [
     },
     {
         skill: "Web Design",
-        level: "advanced",
+        level : "advanced",
       color: "#C3DCAF"
     },
     {
@@ -30,4 +30,8 @@ const data = [
         color: "#FF3B00"
     }
   ];
-    export default data;
+  const emo = [ "💪" , "💪" , "🥳","🥳","❤️","❤️" ]
+ 
+    // export  emo;
+    // export  data;
+    export {emo,data}
