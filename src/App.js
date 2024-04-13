@@ -4,7 +4,7 @@ console.log(data)
 export default function App() {
   return (
     <div className="card">
-      <Avatar />
+      <Avatar />  
       <div className="data">
         <Intro />
         {/* Should contain one Skill component
