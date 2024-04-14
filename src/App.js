@@ -1,5 +1,5 @@
-import {data,emo} from "./data"
-console.log(emo)
+import data from "./data"
+
 
 export default function App() {
   return (
@@ -7,9 +7,6 @@ export default function App() {
       <Avatar />  
       <div className="data">
         <Intro />
-        {/* Should contain one Skill component
-    for each web dev skill that you have,
-    customized with props */}
         <SkillList />
       </div>
     </div>
@@ -30,12 +27,17 @@ function SkillList() {
   
 }
 
-function Skill(props) {
+function Skill({skill,emoji,color}) {
 
   return (
-    <div className="skill" style={{ backgroundColor: props.color }}>
-      <span>{props.skill}</span>
-      <span>{props.emoji}</span>
+    <div className="skill" style={{ backgroundColor:color }}>
+      <span>{skill}</span>
+      <span> 
+      {emoji=== "advanced" && "😶‍🌫️"}
+      {emoji === "intermediate" && "👍"}
+      {emoji === "beginner" && "😣"}
+      </span>
+
     </div>
   );
 }
